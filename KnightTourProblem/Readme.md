@@ -20,26 +20,20 @@ After a full run of the code we get the following:
 Example of a run: for (0,0)
 
 This is the list of the running time of all the squares located on the chessboard:
-(0,0)seconds		(1,0)seconds		(2,0)seconds	                  (3,0)seconds
-(0,1)seconds		(1,1)seconds		(2,1)hour		(3,1)seconds
-(0,2)hour		(1,2)seconds		(2,2)seconds		(3,2)seconds
-(0,3)seconds		(1,3)seconds		(2,3)seconds		(3,3)seconds
-(0,4)seconds		(1,4)seconds		(2,4)seconds		(3,4)seconds
-(0,5)seconds		(1,5)hour		(2,5) hour		(3,5)minutes
-(0,6)seconds		(1,6)seconds		(2,6)seconds		(3,6)seconds
-(0,7)seconds		(1,7)seconds		(2,7)seconds		(3,7)seconds
+(0,0)seconds		(1,0)seconds		(2,0)seconds	        (3,0)seconds
+(0,1)seconds		(1,1)seconds		(2,1)hour		(3,1)seconds
+(0,2)hour		(1,2)seconds		(2,2)seconds		(3,2)seconds
+(0,3)seconds		(1,3)seconds		(2,3)seconds		(3,3)seconds
+(0,4)seconds		(1,4)seconds		(2,4)seconds		(3,4)seconds
+(0,5)seconds		(1,5)hour		(2,5)hour		(3,5)minutes
+(0,6)seconds		(1,6)seconds		(2,6)seconds		(3,6)seconds
+(0,7)seconds		(1,7)seconds		(2,7)seconds		(3,7)seconds
 
-(4,0)seconds		(5,0)seconds		(6,0)seconds	                  (7,0)seconds
-(4,1)seconds		(5,1)seconds		(6,1)10mins		(7,1)seconds
-(4,2)seconds		(5,2)seconds		(6,2)seconds		(7,2)seconds
-(4,3)seconds		(5,3)seconds		(6,3)seconds		(7,3)seconds
-(4,4)hour		(5,4)seconds		(6,4)seconds		(7,4)minutes
-(4,5)seconds		(5,5)seconds		(6,5)45 mins 		(7,5)minutes
-(4,6)seconds		(5,6)hour		(6,6)10mins		(7,6)seconds
-(4,7)seconds		(5,7)seconds		(6,7)seconds		(7,7)seconds
-
-
-
-
-
-
+(4,0)seconds		(5,0)seconds		(6,0)seconds	        (7,0)seconds
+(4,1)seconds		(5,1)seconds		(6,1)10mins		(7,1)seconds
+(4,2)seconds		(5,2)seconds		(6,2)seconds		(7,2)seconds
+(4,3)seconds		(5,3)seconds		(6,3)seconds		(7,3)seconds
+(4,4)hour		(5,4)seconds		(6,4)seconds		(7,4)minutes
+(4,5)seconds		(5,5)seconds		(6,5)45 mins 		(7,5)minutes
+(4,6)seconds		(5,6)hour		(6,6)10mins		(7,6)seconds
+(4,7)seconds		(5,7)seconds		(6,7)seconds		(7,7)seconds
