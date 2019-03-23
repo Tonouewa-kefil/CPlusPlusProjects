@@ -20,8 +20,9 @@ BinarySearchTree WordTree;
 
 int main()
 {
-    
+    FILE* ofile;
     ifstream ifile;
+    ofile=fopen("output.txt", "w");
     ifile.open("input.txt");
     int nline=0;//this will hold the line number of each word.
     
@@ -76,8 +77,11 @@ int main()
             NumberOfLines++;
         }
         
-        WordTree.DisplayTree();//Display the binary tree
+        WordTree.DisplayTree(ofile);//Display the binary tree
+        fclose(ofile);//closing the output file at the end of writing to it
         ifile.close();// close the file.
+        cout<<"your solution is in the file named output.txt"<<"\n";
+        
     }
     return 0;
 }

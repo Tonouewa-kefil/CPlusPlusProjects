@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "Linkedlist.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 
@@ -32,14 +33,14 @@ using namespace std;
 }
 
 
-void linkedList:: display()
+void linkedList:: display(FILE * OUT)
     {
         
         LineNumbers *temp=new LineNumbers;
         temp=head;
         while(temp!=NULL)
         {
-            printf("\t%2d",temp->LineNum);
+            fprintf(OUT,"\t%2d",temp->LineNum);
             temp=temp->next;
         }
        

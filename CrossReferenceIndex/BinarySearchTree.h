@@ -10,6 +10,7 @@
 #define BinarySearchTree_h
 #include "Linkedlist.h"
 #include <string>
+#include <fstream>
 using namespace std;
 
 struct node
@@ -32,21 +33,18 @@ class BinarySearchTree
 {
 private:
     
-    
-    
     wordNode *root;
     wordNode* addTotree(wordNode*,node);
     
-    
 public:
-    void DisplayTree();
+    void DisplayTree(FILE*);
     BinarySearchTree()
     {
          root=NULL;
         
     }
     void insert(node);
-    void DisplayNode(wordNode*);
+    void DisplayNode(wordNode*,FILE*);
     
     
   

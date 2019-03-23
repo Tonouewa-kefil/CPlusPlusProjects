@@ -7,6 +7,7 @@
 //
 #include <iostream>
 #include <stdio.h>
+//#include <fstream>
 #include "BinarySearchTree.h"
 #include "Linkedlist.h"
 
@@ -18,6 +19,7 @@ using namespace std;
 //if the element that needs to be inserted is greater than the root it will go right
 //if the element that need to be inserted is less that the root it will go left
 //if the element that need to be inserted is equal to one of the element in the tree, we wil add its data to the list of line number
+
 
 void BinarySearchTree:: insert(node word)
 {
@@ -35,15 +37,16 @@ wordNode* BinarySearchTree::addTotree( wordNode *topNode,node word)
     {
         topNode=wordL;
     }
-    else if(word.word!="" && topNode->word>word.word)//word less than root
+    else if(word.word!="" && topNode->word>word.word)//word less than root's word
     {
         topNode->leftNode=addTotree(topNode->leftNode, word);
+    
     }
-    else if(word.word!="" && topNode->word<word.word)
+    else if(word.word!="" && topNode->word<word.word) //word greather than root's word
     {
         topNode->rightNode=addTotree(topNode->rightNode, word);
     }
-    else if(word.word==topNode->word)
+    else if(word.word==topNode->word) //word equal to root's word
     {
         topNode->LineIndex.addToLinkedList(word.lineNumber);
     }
@@ -51,26 +54,30 @@ wordNode* BinarySearchTree::addTotree( wordNode *topNode,node word)
     return root;
 }
 
-void BinarySearchTree:: DisplayTree()
+void BinarySearchTree:: DisplayTree(FILE* out)
 {
 
-    DisplayNode(root);
+    DisplayNode(root,out);
     
 }
 
-void BinarySearchTree:: DisplayNode(wordNode * TNode)
+void BinarySearchTree:: DisplayNode(wordNode * TNode,FILE* outfile)
 {
     if(TNode!=NULL)
     {
-        DisplayNode(TNode->leftNode);
-        //cout<<TNode->word;
-        printf("%10s",TNode->word.c_str());
-        TNode->LineIndex.display();
-        cout<<endl;
-        DisplayNode(TNode->rightNode);
-        
+        DisplayNode(TNode->leftNode,outfile);
+        fprintf(outfile,"%10s",TNode->word.c_str());
+        TNode->LineIndex.display(outfile);
+        fprintf(outfile, "\n");
+        DisplayNode(TNode->rightNode,outfile);
     }
     
-    
 }
+
+
+
+
+
+
+
 

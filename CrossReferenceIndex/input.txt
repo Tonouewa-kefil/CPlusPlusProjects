@@ -4,6 +4,7 @@ yes, y2 is a variable.
 yes, y2 is an integer.
 add y2 to x1.
 print the result.
-convert the result to an integer.
+converting the result to an integer.
+converting
 thank you.
 #

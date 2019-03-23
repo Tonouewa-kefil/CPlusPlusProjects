@@ -8,7 +8,7 @@
 
 #ifndef Linkedlist_h
 #define Linkedlist_h
-
+#include <fstream>
 
 
 struct LineNumbers
@@ -30,7 +30,7 @@ public:
     
     LineNumbers createnode(int);
     void addToLinkedList(int);
-    void display();
+    void display(FILE*);
     int getFirst();
     void deleteall();
     bool isEmpty();
