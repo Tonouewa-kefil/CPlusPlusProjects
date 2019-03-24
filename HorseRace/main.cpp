@@ -9,7 +9,7 @@
 #include <time.h>
 #include <string>
 #define NumberOfHorse 5
-#define NumberOfTurn 15
+#define NumberOfTurn 25
 using namespace std;
 
 void Populate_Track(char [NumberOfHorse][NumberOfTurn]);//This will be used to fill the track with horse number and turns.
@@ -21,13 +21,16 @@ int main()
 {
      srand(unsigned (time (NULL)));// This will allow us to have a different random variable from the last one
     char Horse_Track[NumberOfHorse][NumberOfTurn];//2d charater array to hold the horse and track
-    int HorsePosition[5]={0,0,0,0,0};//Array holding information about each horse position
-    
+    int HorsePosition[NumberOfHorse];//Array holding information about each horse position
+    for(int num=0;num<NumberOfHorse;num++)
+    {
+        HorsePosition[num]=0;
+    }
     //Before the race start we position the hosrse in the track
     Populate_Track(Horse_Track);
-    
+    Display_Track(Horse_Track);
     //The beginning of the race
-    while(!isdigit(Horse_Track[0][14])&& !isdigit(Horse_Track[1][14])&& !isdigit(Horse_Track[2][14])&& !isdigit(Horse_Track[3][14])&&!isdigit(Horse_Track[4][14]))//While none of the horses has reach the finish line keep doing the following
+    while(!isdigit(Horse_Track[0][NumberOfTurn-1])&& !isdigit(Horse_Track[1][NumberOfTurn-1])&& !isdigit(Horse_Track[2][NumberOfTurn-1])&& !isdigit(Horse_Track[3][NumberOfTurn-1])&&!isdigit(Horse_Track[4][NumberOfTurn-1]))//While none of the horses has reach the finish line keep doing the following
     {
             for (int i=0; i<NumberOfHorse; i++)
             {
@@ -42,15 +45,15 @@ int main()
                 }
             }
             
-            Display_Track(Horse_Track);
-        cout<<"Press Enter for another turn:";
+            //Display_Track(Horse_Track);
+            cout<<"Press Enter for another turn:";
             cin.get();//Waiting for the user to press enter to display the next turn.
     }
     
     //end of the race
     for (int pos=0; pos< sizeof(HorsePosition); pos++)
     {
-        if (HorsePosition[pos]==14)
+        if (HorsePosition[pos]==24)
         {
             cout<<"Horse "<<pos+1 <<" is the winner!"<<endl;
         }
@@ -60,9 +63,9 @@ int main()
 
 void Populate_Track (char track[NumberOfHorse][NumberOfTurn])
 {
-    for (int i=0; i<5; i++)
+    for (int i=0; i<NumberOfHorse; i++)
     {
-        for (int j=0; j<15; j++)
+        for (int j=0; j<NumberOfTurn; j++)
         {
             if (j==0)
             {
@@ -97,11 +100,11 @@ void Populate_Track (char track[NumberOfHorse][NumberOfTurn])
 }
 void Display_Track (char track [NumberOfHorse][NumberOfTurn])
 {
-    for (int i=0;i<5; i++)
+    for (int i=0;i<NumberOfHorse; i++)
     {
-        for (int j=0; j<15;j++)
+        for (int j=0; j<NumberOfTurn;j++)
         {
-            cout<<track[i][j];
+            cout<<" "<<track[i][j];
         }
         cout<<endl;
     }
